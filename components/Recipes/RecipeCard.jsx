@@ -3,10 +3,7 @@ import React from "react";
 
 const RecipeCard = ({ recipe, handleDetailsOpen }) => {
   return (
-    <div
-      onClick={() => handleDetailsOpen(recipe?.idMeal)}
-      className="group space-y-6 border border-gray-100  rounded-3xl bg-white  px-4 py-4 text-center shadow hover:cursor-pointer hover:shadow-xl transition duration-200 shadow-gray-600/10"
-    >
+    <div className="group space-y-6 border border-gray-100  rounded-3xl bg-white  px-4 py-4 text-center shadow hover:cursor-pointer hover:shadow-xl transition duration-200 shadow-gray-600/10">
       <Image
         className="mx-auto rounded-2xl"
         src={recipe?.strMealThumb}
@@ -24,7 +21,12 @@ const RecipeCard = ({ recipe, handleDetailsOpen }) => {
         animi officiis.
       </p>
       <div className="relative mx-auto flex items-center justify-center invisible  group-hover:visible">
-        <button className="text-primary">Click to see details</button>
+        <button
+          onClick={() => handleDetailsOpen(recipe?.idMeal)}
+          className="text-primary"
+        >
+          Click to see details
+        </button>
       </div>
     </div>
   );
