@@ -17,7 +17,7 @@ const Hero = () => {
                 delivery platform.
               </p>
             </div>
-            <div className="hidden md:block md:w-7/12 lg:w-6/12 relative">
+            <div className="w-full md:w-7/12 lg:w-6/12 relative">
               <Image
                 src="/images/home/food.webp"
                 className="relative w-full"
